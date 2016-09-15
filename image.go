@@ -513,6 +513,9 @@ func (c *Client) BuildImage(opts BuildImageOptions) error {
 		}
 	}
 
+	fmt.Println(len(opts.BuildArgs))
+	fmt.Println(opts.BuildArgs)
+
 	if len(opts.BuildArgs) > 0 {
 		v := make(map[string]string)
 		for _, arg := range opts.BuildArgs {
